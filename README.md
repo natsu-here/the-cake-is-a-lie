@@ -1,14 +1,21 @@
 # The Cake Is a Lie
 
-Це сайт-рандомайзер для вибору спеціальності при вступі у ВНЗ.
+This is a randomizer website to help you choose a university major when applying.
 
-## Як користуватись
+## How to Use
 
-- Відкрий сайт
-- Натисни кнопку для вибору спеціальності
-- Отримай випадковий результат
+- Open the website
+- Click the button to select a major
+- Get a random result
 
 ---
 
-Автор: natsu-here
+Author: natsu-here
 
+## License and Usage
+
+This project is licensed under the MIT License (see the LICENSE file for details).
+
+**Note:**  
+This website and its code are provided for personal and educational use only.  
+Commercial use or redistribution for profit is not permitted without explicit permission from the author.
