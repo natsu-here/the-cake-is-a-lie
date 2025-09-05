@@ -1,0 +1,159 @@
+/* Базові стилі */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  scroll-behavior: smooth; /* плавна прокрутка */
+}
+
+/* Центрування та стилі тексту */
+.center-text {
+  text-align: center;
+  user-select: none;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+/* Заголовок */
+.header-text {
+  font-family: "Courier New", Courier, monospace;
+  max-width: 90vw;
+  font-size: 1.4rem;
+  user-select: none;
+  margin: 0;
+}
+
+/* Кнопка під заголовком */
+.magic-btn {
+  margin-top: 10px;
+  font-size: 2rem;
+  border-radius: 12px;
+  padding: 12px 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+/* Кнопка переключення теми у правому верхньому куті */
+#theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 40;
+  transition: transform 0.3s ease;
+}
+
+/* Головний контейнер */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* тепер може розтягуватися */
+  gap: 20px;
+  padding: 0 20px;
+  padding-top: 140px; /* щоб контент не накладався на заголовок */
+  position: relative;
+  z-index: 10;
+}
+
+/* Скляний блок з інформацією */
+.glass-block {
+  background-color: rgba(180, 180, 180, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 15px 25px;
+  margin-top: 15px;
+  color: #222;
+  text-align: center;
+  font-size: 1rem;
+  user-select: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Напис "the cake is a lie" */
+#cake-lie {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "Courier New", Courier, monospace;
+  user-select: none;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 15;
+  /* top і left задаються через JS */
+}
+
+/* Сховати елементи */
+.hidden {
+  display: none;
+}
+
+/* День - стиль */
+body.day {
+  background: white;
+  color: black;
+}
+
+body.day .glass-block {
+  background: rgba(220, 220, 220, 0.25);
+  color: black;
+}
+
+body.day .magic-btn {
+  background-color: #6a4aff; /* фіолетовий */
+}
+
+/* Ніч - стиль */
+body.night {
+  background: black;
+  color: white;
+}
+
+body.night .glass-block {
+  background-color: rgba(50, 50, 50, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #eee;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+}
+
+body.night .magic-btn {
+  background-color: #2e7d32; /* зелений */
+}
+
+/* Анімація плаваючих градієнтів */
+#background-gradients {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.gradient-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(100px);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
